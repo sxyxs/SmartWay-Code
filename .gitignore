@@ -1,0 +1,8 @@
+data/
+read_data.py
+ram_plus_swin_large_14m.pth
+
+habitat_extensions/__pycache__/
+.DS_Store
+__pycache__/
+.vscode/

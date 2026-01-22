@@ -1,0 +1,10 @@
+training_data
+gen_training_data/nav_dicts
+gen_training_data/raw_graphs
+__pycache__
+checkpoints
+habitat_connectivity_graph_folder-20241022T013030Z-001
+outputtxt
+training_data_zerui
+rgb_images/
+rgb_images_bak
