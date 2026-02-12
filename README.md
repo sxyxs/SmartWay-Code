@@ -48,8 +48,30 @@ We propose a **zero-shot VLN-CE framework** integrating an enhanced waypoint pre
 
 
 ## 📦 Environment Setup
+```bash
+# conda install
+conda create -n smartway python==3.8.20
+conda activate smartway
 
-This project builds upon [Discrete-Continuous-VLN](https://github.com/YicongHong/Discrete-Continuous-VLN). Please refer to their repository to set up the required conda environment and dependencies.
+# pytorch
+pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu121
+
+# habitat-sim
+wget https://anaconda.org/aihabitat/habitat-sim/0.1.7/download/linux-64/habitat-sim-0.1.7-py3.8_headless_linux_856d4b08c1a2632626bf0d205bf46471a99502b7.tar.bz2
+conda install habitat-sim-0.1.7-py3.8_headless_linux_856d4b08c1a2632626bf0d205bf46471a99502b7.tar.bz2
+
+# habitat-lab
+git clone --branch v0.1.7 git@github.com:facebookresearch/habitat-lab.git
+cd habitat-lab
+python setup.py develop --all # install habitat and habitat_baselines
+cd ..
+
+# Adapt requirements.txt from Discrete-Continuous-VLN repo
+python -m pip install -r requirements.txt
+pip install webdataset
+pip install openai tenacity timm fairscale
+```
+This project builds upon [Discrete-Continuous-VLN](https://github.com/YicongHong/Discrete-Continuous-VLN). Please refer to their repository to set up the required conda environment and dependencies. Smartway running under Python3.8.20.
 
 > ℹ️ **Note**: All experiments are conducted using **Habitat v0.1.7**.
 
@@ -102,6 +124,8 @@ After downloading, place the dataset in:
 Download the **Matterport3D** dataset from the official website:
 
 🔗 [https://niessner.github.io/Matterport/](https://niessner.github.io/Matterport/)
+
+You might need to apply for dataset access at first. 
 
 Place the extracted scene data under:
 
