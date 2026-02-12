@@ -125,7 +125,7 @@ Download the **Matterport3D** dataset from the official website:
 
 🔗 [https://niessner.github.io/Matterport/](https://niessner.github.io/Matterport/)
 
-You might need to apply for dataset access at first. 
+You may need to apply for dataset access first.
 
 Place the extracted scene data under:
 
